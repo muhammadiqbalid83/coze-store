@@ -6,12 +6,12 @@ import NavLinks from './NavLinks'
 import { useSelector } from 'react-redux'
 
 const themes = {
-  autumn: 'autumn',
+  lofi: 'lofi',
   dracula: 'dracula',
 }
 
 const getThemeFromLocalStorage = (): string => {
-  return localStorage.getItem('theme') || themes.autumn
+  return localStorage.getItem('theme') || themes.lofi
 }
 
 const Navbar: React.FC = () => {
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52"
             >
-              navlinks
+              <NavLinks />
             </ul>
           </div>
         </div>
